@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Especial</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #mensagem {
+        margin-top: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="mensagem">
+    <h2>Pedido Especial</h2>
+    <p>Oi <span id="nome">[Nome da Pessoa]</span>,</p>
+    <p>Espero que esteja bem! Tenho algo que gostaria muito de compartilhar contigo.</p>
+    <p>Desde que nos conhecemos, tenho percebido o quão incrível você é. Sua companhia ilumina meus dias e sua presença traz uma alegria única à minha vida.</p>
+    <p>Então, estive pensando... o que você acharia de ficarmos juntos? Não estou falando apenas de "ficar juntos", mas de construir algo especial, compartilhar momentos e experiências que nos fortaleçam e nos façam crescer juntos.</p>
+    <p>Sei que pode ser um pouco inesperado, mas estou aqui, de coração aberto, esperando sua resposta.</p>
+    <p>Ah, e tem algo especial sobre este pedido: observe os botões abaixo. Vou te contar um segredo... quando o mouse se aproximar do botão "Não", algo mágico acontece. Mas, claro, só se você clicar em "Sim". Experimente!</p>
+    <p><strong>Então, o que você diz? <br>Quer ficar comigo?</strong></p>
+    <p>Mal posso esperar para ver o que o destino nos reserva.</p>
+</div>
+
+<button onclick="responder('Sim')">Sim</button>
+<button id="naoBtn" onmouseover="teleportar()">Não</button>
+
+<script>
+    function responder(resposta) {
+        alert("Sua resposta: " + resposta);
+    }
+
+    function teleportar() {
+        var posX = Math.floor(Math.random() * window.innerWidth);
+        var posY = Math.floor(Math.random() * window.innerHeight);
+        document.getElementById("naoBtn").style.position = "absolute";
+        document.getElementById("naoBtn").style.left = posX + "px";
+        document.getElementById("naoBtn").style.top = posY + "px";
+    }
+</script>
+
+</body>
+</html>
